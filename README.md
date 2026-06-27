@@ -1,6 +1,6 @@
 # Machine Learning Tutorial
 
-# Machine Learning
+## Machine Learning
 
 Explicit programming involves writing code for each specific scenario, whereas in machine learning, an algorithm explores data to identify patterns and derive outputs without needing explicit instructions for each condition. This allows machine learning models to handle new inputs flexibly and effectively.
 
@@ -50,3 +50,6 @@ The high demand and salaries for ML professionals today are due to the current s
 9. We are currently in the growth phase of machine learning, presenting numerous opportunities for newcomers to the field.
 
 
+## AI vs ML vs DL - Understanding the Differences
+
+![img](img/image.png)
