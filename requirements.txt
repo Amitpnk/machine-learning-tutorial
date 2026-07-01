@@ -1,0 +1,61 @@
+# ── Core ──────────────────────────────────────────────────────────────────────
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.9.0
+seaborn==0.13.2
+scipy==1.13.1
+scikit-learn==1.5.0
+joblib==1.4.2
+
+# ── Ensemble / Boosting ───────────────────────────────────────────────────────
+xgboost==2.0.3
+lightgbm==4.3.0
+catboost==1.2.5
+optuna==3.6.1
+
+# ── Deep Learning ─────────────────────────────────────────────────────────────
+torch==2.3.0
+torchvision==0.18.0
+tensorflow==2.16.1
+keras==3.3.3
+
+# ── NLP & GenAI ───────────────────────────────────────────────────────────────
+transformers==4.41.2
+datasets==2.19.2
+tokenizers==0.19.1
+langchain==0.2.5
+langchain-community==0.2.5
+langchain-openai==0.1.8
+faiss-cpu==1.8.0
+chromadb==0.5.0
+sentence-transformers==3.0.1
+openai==1.30.5
+
+# ── Computer Vision ───────────────────────────────────────────────────────────
+opencv-python==4.9.0.80
+Pillow==10.3.0
+ultralytics==8.2.24  # YOLOv8
+
+# ── Time Series ───────────────────────────────────────────────────────────────
+prophet==1.1.5
+statsmodels==0.14.2
+pmdarima==2.0.4
+
+# ── Reinforcement Learning ────────────────────────────────────────────────────
+gymnasium==0.29.1
+stable-baselines3==2.3.2
+
+# ── MLOps ─────────────────────────────────────────────────────────────────────
+mlflow==2.13.0
+dvc==3.51.2
+fastapi==0.111.0
+uvicorn==0.30.1
+pydantic==2.7.3
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+requests==2.32.3
+beautifulsoup4==4.12.3
+python-dotenv==1.0.1
+tqdm==4.66.4
+ipykernel==6.29.4
+ipywidgets==8.1.3

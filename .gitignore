@@ -158,3 +158,40 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# ── ML Course — Data Files ─────────────────────────────────────────────────────
+# Large data files — fetch via datasets/download_datasets.py
+datasets/raw/
+datasets/processed/
+*.csv
+*.xlsx
+*.parquet
+*.zip
+*.tar.gz
+*.h5
+*.hdf5
+
+# Model artifacts
+*.pt
+*.pth
+*.onnx
+*.pb
+*.joblib
+*.model
+models/
+
+# MLflow tracking
+mlruns/
+mlartifacts/
+
+# DVC cache
+.dvc/tmp/
+.dvc/cache/
+
+# Solutions (on solutions branch only — not exposed on main)
+**/solutions/*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

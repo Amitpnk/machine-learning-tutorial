@@ -1,55 +1,109 @@
-# Machine Learning Tutorial
+# Machine Learning: From Foundations to Production + Generative AI
 
-## Machine Learning
+**14-Week Course · 56 Hours · Python 3.11+**
 
-Explicit programming involves writing code for each specific scenario, whereas in machine learning, an algorithm explores data to identify patterns and derive outputs without needing explicit instructions for each condition. This allows machine learning models to handle new inputs flexibly and effectively.
+A hands-on ML course covering supervised learning, deep learning, NLP, Generative AI (LLMs + RAG), and MLOps — built for learners going from Python basics to production-ready systems.
 
-#### Summary
+> This repo is also the companion codebase for the **YouTube series** — see [`youtube/episode_guide.md`](youtube/episode_guide.md) for the video-to-notebook mapping.
 
-* Explicit Programming vs. Machine Learning: In explicit programming, code is written for each specific scenario, but in machine learning, an algorithm explores data to identify patterns and derive outputs.
-* Automatic Handling by Algorithms: In machine learning, you don't have to write code for each condition; the machine learning algorithm automatically handles it.
-* Example - Addition of Numbers: For adding two numbers, traditional programming requires explicit code, whereas machine learning models learn the addition pattern from data and can sum any number of inputs after training.
-* Key Difference: Unlike explicit code which fails with unexpected inputs, machine learning models adapt to new inputs based on learned patterns, showcasing their flexibility and efficiency.
+---
 
-### The Importance of Machine Learning
+## What is Machine Learning?
 
-**Scenario 1: Email Spam Classification**
-Traditional programming can't handle the dynamic nature of spam emails effectively. Creating a spam classifier program using fixed rules is difficult because spammers can easily change tactics by using different words. Machine learning solves this by learning from data and automatically updating its logic based on new patterns. This adaptability makes ML more efficient for tasks like spam detection.
+Unlike traditional programming where you write rules for every scenario, ML algorithms **learn patterns from data** and handle new inputs automatically — making them ideal for tasks like spam detection, image classification, and data mining where writing explicit rules is impractical.
 
-**Scenario 2: Image Classification for Dogs**
-Creating a program to detect dogs in images through traditional coding is impractical due to the vast diversity in dog breeds and their characteristics. Human-like learning, which machine learning mimics, is needed. Machine learning can identify patterns and features from data, making it suitable for complex tasks like recognizing various breeds of dogs.
+![AI vs ML vs DL](img/image.png)
 
-**Scenario 3: Data Mining**
-Data analysis involves extracting patterns from data, but when patterns are not easily visible, data mining is used. This involves applying machine learning algorithms to uncover hidden information, creating prediction models that can identify patterns not apparent through traditional methods. Machine learning is essential for extracting valuable insights from complex datasets, making it a powerful tool for data mining.
+---
 
-These scenarios illustrate why machine learning is becoming increasingly vital and is revolutionizing various industries by handling tasks that traditional programming cannot efficiently address.
+## Course Modules
 
-#### Summary
+| Week | Module | Topic |
+|------|--------|-------|
+| 1 | [Module 01](modules/01_python_for_ml/) | Python for ML — NumPy, Pandas, Matplotlib |
+| 2 | [Module 02](modules/02_math_statistics/) | Math & Statistics — Linear Algebra, Calculus, Probability |
+| 3 | [Module 03](modules/03_data_engineering_eda/) | Data Engineering & EDA |
+| 4 | [Module 04](modules/04_regression/) | Regression — Linear, Ridge, Lasso, ElasticNet |
+| 5 | [Module 05](modules/05_classification/) | Classification — Logistic, SVM, KNN, Naive Bayes |
+| 6 | [Module 06](modules/06_ensemble_methods/) | Ensemble Methods — XGBoost, LightGBM, Optuna |
+| 7 | [Module 07](modules/07_unsupervised_learning/) | Unsupervised Learning — K-Means, PCA, t-SNE ⭐ Mid-term |
+| 8 | [Module 08](modules/08_deep_learning/) | Deep Learning — MLP, Backprop, TensorFlow, PyTorch |
+| 9 | [Module 09](modules/09_computer_vision/) | Computer Vision — CNN, ResNet, YOLO, Transfer Learning |
+| 10 | [Module 10](modules/10_nlp_generative_ai/) | NLP & Generative AI — BERT, Transformers, RAG, Agents |
+| 11 | [Module 11](modules/11_time_series_recommenders/) | Time Series & Recommender Systems |
+| 12 | [Module 12](modules/12_reinforcement_learning/) | Reinforcement Learning — Q-Learning, DQN |
+| 13 | [Module 13](modules/13_mlops_deployment/) | MLOps & Deployment — MLflow, Docker, FastAPI, SageMaker |
+| 14 | [Module 14](modules/14_capstone/) | Capstone Project — End-to-End Production System |
 
-* Traditional programming can't always handle dynamic tasks like email spam classification, where machine learning adapts automatically to new data.
-* The diversity in dog breeds makes it impractical to write exhaustive code for image classification, whereas machine learning efficiently identifies patterns similar to human learning.
-* Data mining applies machine learning algorithms to uncover hidden patterns in data, making it a crucial tool for extracting insights from complex datasets.
+---
 
+## Quick Start
 
-### The Evolution and Current Landscape of Machine Learning
+### Option A — Conda (Recommended)
+```bash
+conda env create -f environment.yml
+conda activate ml-course
+jupyter lab
+```
 
-Learning the history of machine learning (ML) is crucial when starting with the technology. Similar to the actor Nawazuddin Siddiqui, who had a long career before gaining fame, ML has existed for decades but only recently gained prominence. Initially hindered by data scarcity and hardware limitations, ML saw a surge in growth after 2010 due to the explosion of internet usage and advancements in hardware, leading to an abundance of data and computational power.
+### Option B — pip + venv
+```bash
+python -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+jupyter lab
+```
 
-The high demand and salaries for ML professionals today are due to the current shortage of skilled talent. As more people learn ML, salaries will normalize because of the increased supply of qualified professionals, mirroring the historical trend seen with Java programming. Currently, we are in the growth phase of ML, offering many opportunities for those entering the field now.
+### Download Datasets
+```bash
+python datasets/download_datasets.py
+```
 
-#### Summary
+---
 
-1. Understanding the history of machine learning is crucial for anyone starting with this technology.
-2. Machine learning, like actor Nawazuddin Siddiqui, existed for decades before gaining recognition in the 2010s.
-3. The significant growth in machine learning is due to the increase in data generation and advancements in hardware since 2010.
-4. Initially, machine learning faced challenges due to data scarcity and hardware limitations.
-5. The rise of the internet and smartphones has provided the necessary data and computational power for machine learning's rapid growth.
-6. The current high demand and salaries for machine learning professionals are due to a shortage of skilled individuals.
-7. As more people learn machine learning, salaries will normalize due to an increased supply of talent.
-8. This trend is similar to the rise and eventual normalization of Java programming salaries.
-9. We are currently in the growth phase of machine learning, presenting numerous opportunities for newcomers to the field.
+## Repository Structure
 
+```
+machine-learning-tutorial/
+├── modules/                  # One folder per week
+│   └── <module>/
+│       ├── README.md         # Learning objectives + episode links
+│       ├── notebooks/        # Lecture notebooks
+│       ├── lab/              # Student starter files
+│       └── solutions/        # Solutions (solutions branch only)
+├── projects/
+│   ├── midterm/              # Week 7 mid-term project
+│   └── capstone/             # Week 14 final project
+├── datasets/                 # Gitignored data; fetched by script
+├── utils/                    # Shared plotting / preprocessing helpers
+├── assets/img/               # Diagrams and visuals
+└── youtube/                  # YouTube series planning
+    ├── episode_guide.md      # Episode → notebook mapping
+    └── descriptions/         # Video descriptions
+```
 
-## AI vs ML vs DL - Understanding the Differences
+---
 
-![img](img/image.png)
+## Projects
+
+| Project | Week | Description |
+|---------|------|-------------|
+| [Mid-term](projects/midterm/) | 7 | End-to-end pipeline using Modules 1–6 |
+| [Capstone](projects/capstone/) | 14 | Full production ML system with deployment |
+
+---
+
+## Prerequisites
+
+- Python basics (functions, OOP, list comprehensions)
+- Git fundamentals (clone, commit, push)
+- Familiarity with statistics concepts
+
+---
+
+## Syllabus & Resources
+
+- [Full Syllabus](ML_GenAI_Course_Syllabus.md)
+- [AWS ML Certification Syllabus](ML_Course_Syllabus_MLA-C01.md)
+- [YouTube Episode Guide](youtube/episode_guide.md)
+- [Contributing Guide](CONTRIBUTING.md)
