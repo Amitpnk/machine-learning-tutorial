@@ -1,8 +1,7 @@
-# Machine Learning: From Foundations to Production + Generative AI
+# Machine Learning Course Syllabus
 
 **Course Title:** Machine Learning: From Foundations to Production + Generative AI  
 **Duration:** 14 Weeks (56 Hours)  
-**Level:** Intermediate (College Students / Working Professionals)  
 **Prerequisites:** Basic Python, Git basics, familiarity with statistics concepts
 
 ---
@@ -18,24 +17,6 @@ By the end of this course, students will be able to:
 - Build and deploy LLM and RAG-based Generative AI applications
 - Apply CI/CD, monitoring, and cloud deployment strategies for ML systems
 
----
-
-## Assessment & Grading
-
-| Component | Weight |
-|---|---|
-| Weekly Quizzes | 20% |
-| Lab Assignments | 30% |
-| Mid-term Project (Week 7) | 20% |
-| Final Capstone Project (Week 14) | 30% |
-
-| Grade | Score |
-|---|---|
-| A+ | 90–100% |
-| A | 80–89% |
-| B | 70–79% |
-| C | 60–69% |
-| F | Below 60% |
 
 ---
 
@@ -43,6 +24,8 @@ By the end of this course, students will be able to:
 ### Week 1 — Python for Machine Learning
 
 **Topics:**
+- What is Machine Learning? Types: Supervised, Unsupervised, Reinforcement Learning
+- ML vs AI vs Deep Learning — the landscape
 - Python refresher: data types, functions, OOP, list comprehensions
 - NumPy: arrays, broadcasting, vectorized operations
 - Pandas: DataFrames, merging, groupby, time series handling
@@ -182,8 +165,6 @@ By the end of this course, students will be able to:
 - Kaggle-style credit risk prediction competition
 - XGBoost vs. LightGBM benchmarking
 - Optuna hyperparameter tuning pipeline
-
-> **Mid-term Project assigned at end of Week 6 — due Week 7**
 
 ---
 
@@ -463,10 +444,26 @@ Students complete one full end-to-end project covering:
 
 ---
 
+## Assessment & Grading
+
+| Component | Weight |
+|---|---|
+| Weekly Quizzes | 20% |
+| Lab Assignments | 30% |
+| Mid-term Project (Week 7) | 20% |
+| Final Capstone Project (Week 14) | 30% |
+
+| Grade | Score |
+|---|---|
+| A+ | 90–100% |
+| A | 80–89% |
+| B | 70–79% |
+| C | 60–69% |
+| F | Below 60% |
+
+---
+
 ## Final Outcome
 
 Students graduating from this course will be capable of designing, developing, evaluating, deploying, monitoring, and maintaining modern **Machine Learning** and **Generative AI** applications — production-ready and industry-relevant.
 
----
-
-*Last Updated: July 2026*
