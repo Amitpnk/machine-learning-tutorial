@@ -1,6 +1,6 @@
-# Machine Learning Course Syllabus
+# The Complete Machine Learning & Generative AI Engineering Course
 
-**Course Title:** Machine Learning: From Foundations to Production + Generative AI  
+**Course Title:** The Complete Machine Learning & Generative AI Engineering Course  
 **Duration:** 14 Weeks (56 Hours)  
 **Prerequisites:** Basic Python, Git basics, familiarity with statistics concepts
 
@@ -15,6 +15,7 @@ By the end of this course, students will be able to:
 - Implement supervised, unsupervised, and deep learning models
 - Build generative models (diffusion, GANs) for images and text
 - Build, evaluate, and deploy LLM, RAG, and agentic Generative AI applications
+- Integrate agents with external tools and data using the Model Context Protocol (MCP)
 - Develop production-ready ML/LLM pipelines with MLOps and LLMOps best practices
 - Apply CI/CD, monitoring, safety, and cloud deployment strategies for ML systems
 
@@ -294,11 +295,23 @@ By the end of this course, students will be able to:
 **Agentic AI:**
 - Tool use and the ReAct loop
 - Agent orchestration with LangGraph; multi-agent patterns
-- Model Context Protocol (MCP): connecting agents to tools and data
+- Memory, planning, and error recovery in agent loops
+
+**Model Context Protocol (MCP):**
+- Why MCP exists: the M×N integration problem, standardizing tool/data access
+- Architecture: hosts, clients, and servers
+- Server primitives: tools, resources, and prompts
+- Transports: stdio (local) vs. HTTP/SSE (remote)
+- Using existing MCP servers (filesystem, database, GitHub, web search)
+- Writing a custom MCP server with the Python SDK
+- Connecting MCP servers to agents (Claude Desktop / Claude Code, LangGraph adapters)
+- MCP vs. plain function calling — when each is the right choice
+- Security: authorization, scoping tool access, prompt-injection risk via tool output
 
 **Hands-on Lab:**
 - Build a PDF chatbot using RAG (LangChain / LlamaIndex + FAISS)
 - Build a tool-using agent with LangGraph
+- Build a custom MCP server (exposing a database + internal API as tools) and drive it from an agent
 - Fine-tune a small open model with LoRA/QLoRA
 
 ---
@@ -394,6 +407,7 @@ Students complete one full end-to-end project covering:
 | Agriculture | Plant Disease Detection (CNN) |
 | Document AI | OCR System or PDF Question Answering |
 | GenAI | Agentic RAG Assistant (LangGraph + Vector DB) |
+| GenAI | MCP-powered Assistant (custom MCP server + agent client) |
 | GenAI | Fine-tuned Domain Chatbot (LoRA) with evaluation harness |
 | Computer Vision | Object Detection Pipeline |
 | Generative Vision | Text-to-Image or Image Editing App (Diffusion) |
@@ -440,6 +454,7 @@ Students complete one full end-to-end project covering:
 | Deep Learning | TensorFlow / Keras, PyTorch |
 | Generative Models | Diffusers (Stable Diffusion), PyTorch |
 | NLP & LLMs | HuggingFace Transformers, LangChain, LangGraph, LlamaIndex, Ollama, vLLM |
+| Agents & Tooling | Model Context Protocol (MCP), MCP Python SDK, Claude Code / Claude Desktop |
 | Vector Databases | FAISS, ChromaDB, pgvector, Qdrant, Pinecone |
 | LLMOps & Eval | RAGAS, LangSmith / Langfuse |
 | Computer Vision | OpenCV, torchvision, YOLO |
@@ -496,6 +511,7 @@ Students complete one full end-to-end project covering:
 - Andrew Ng — Machine Learning Specialization (Coursera)
 - DeepLearning.AI — Deep Learning Specialization & GenAI short courses (RAG, LangChain, Fine-tuning)
 - LangChain / LangGraph documentation and cookbooks
+- Model Context Protocol — official spec and server examples (modelcontextprotocol.io)
 - Model provider docs (Anthropic, OpenAI, Google) for prompting, tool use, and structured outputs
 
 ---
