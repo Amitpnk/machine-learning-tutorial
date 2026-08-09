@@ -1,9 +1,9 @@
 # The Complete Machine Learning & Generative AI Engineering Course
 
-**Course Title:** The Complete Machine Learning & Generative AI Engineering Course
-**Duration:** 20 Weeks (80 Hours) core track + optional electives
-**Format:** 4 hours/week — concept walkthrough, live coding, and a graded hands-on lab
-**Prerequisites:** Basic Python, Git basics, familiarity with statistics concepts
+**Course Title:** The Complete Machine Learning & Generative AI Engineering Course  
+**Duration:** 20 Weeks (80 Hours) core track + optional electives  
+**Format:** 4 hours/week — concept walkthrough, live coding, and a graded hands-on lab  
+**Prerequisites:** Basic Python, Git basics, familiarity with statistics concepts 
 
 ---
 
