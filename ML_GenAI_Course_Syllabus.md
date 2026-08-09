@@ -510,10 +510,26 @@ By the end of this course, students will be able to:
 - Server primitives: tools, resources, and prompts
 - Transports: stdio (local) vs. HTTP/SSE (remote)
 - Using existing MCP servers (filesystem, database, GitHub, web search)
-- Writing a custom MCP server with the Python SDK
-- Connecting MCP servers to agents (Claude Desktop / Claude Code, LangGraph adapters)
 - MCP vs. plain function calling — when each is the right choice
 - Security: authorization, scoping tool access, prompt-injection risk via tool output
+
+**Building MCP Servers with FastMCP:**
+- The ecosystem untangled — and why online tutorials contradict each other:
+  - the low-level `mcp` protocol SDK (verbose, full control)
+  - **FastMCP 1.0** — donated into the official SDK, importable as `mcp.server.fastmcp`
+  - **FastMCP 2.0** — the separately maintained successor with auth, testing, and deployment
+- Choosing between them for a given project
+- Decorator-based servers: `@mcp.tool`, `@mcp.resource`, `@mcp.prompt`
+- Type hints and docstrings *as* the tool schema — letting Python generate the contract
+- Pydantic models for complex arguments and validated returns
+- Context injection: logging, progress reporting, and sampling from inside a tool
+- Running and debugging locally with the MCP Inspector
+- The FastMCP client: programmatic access and in-memory testing without a subprocess
+- Testing MCP servers with pytest
+- Server composition: mounting and proxying multiple servers behind one endpoint
+- Generating a server from an existing OpenAPI spec or FastAPI app
+- Auth and deployment: bearer tokens, OAuth, and remote hosting
+- Connecting servers to agents (Claude Desktop / Claude Code, LangGraph adapters)
 
 **Computer-Use & Coding Agents:**
 - Browser and computer-use agents — capabilities and current limits
@@ -528,7 +544,9 @@ By the end of this course, students will be able to:
 
 **Hands-on Lab:**
 - Build a tool-using research agent with LangGraph (search + calculator + file tools)
-- Build a custom MCP server exposing a database and an internal API as tools
+- Build a custom MCP server with FastMCP exposing a database and an internal API as tools
+- Write pytest tests for it using FastMCP's in-memory client (no subprocess, no agent)
+- Wrap an existing FastAPI service as an MCP server in under 20 lines
 - Connect the MCP server to an agent client and trace a full multi-step run
 - Add a human-approval checkpoint before any write or destructive tool call
 - Red-team your own agent: get it to misuse a tool via injected content, then fix it
@@ -723,7 +741,7 @@ Students complete one full end-to-end project covering:
 | Agriculture | Plant Disease Detection (CNN) |
 | Document AI | VLM-based Invoice/Form Extraction Pipeline |
 | GenAI | Agentic RAG Assistant (LangGraph + Vector DB) |
-| GenAI | MCP-powered Assistant (custom MCP server + agent client) |
+| GenAI | MCP-powered Assistant (FastMCP server + agent client) |
 | GenAI | Fine-tuned Domain Chatbot (LoRA + DPO) with an evaluation harness |
 | Voice AI | Realtime Voice Agent with function calling |
 | Computer Vision | Object Detection or Segmentation Pipeline |
@@ -827,7 +845,7 @@ Students complete one full end-to-end project covering:
 | Generative Models | Diffusers (Stable Diffusion), ControlNet |
 | NLP & LLMs | HuggingFace Transformers, PEFT, TRL, LangChain, LlamaIndex |
 | Local Inference | Ollama, llama.cpp, LM Studio |
-| Agents & Tooling | Model Context Protocol (MCP), MCP Python SDK, LangGraph, Claude Agent SDK, CrewAI |
+| Agents & Tooling | Model Context Protocol (MCP), FastMCP, MCP Python SDK, MCP Inspector, LangGraph, Claude Agent SDK, CrewAI |
 | Vector Databases | FAISS, ChromaDB, pgvector, Qdrant, Pinecone, Weaviate |
 | Structured Output | Outlines, Instructor, Pydantic |
 | LLMOps & Eval | RAGAS, LangSmith / Langfuse, DeepEval |
@@ -862,7 +880,7 @@ Students complete one full end-to-end project covering:
 | 12 | Module 12 | LLMs & Context Engineering | Prompting, Reasoning Models, Caching |
 | 13 | Module 13 | Fine-Tuning & Alignment | LoRA/QLoRA, DPO, Distillation |
 | 14 | Module 14 | RAG & Vector Search | Hybrid Search, Rerankers, RAGAS |
-| 15 | Module 15 | Agentic AI & MCP | ReAct, LangGraph, MCP Servers |
+| 15 | Module 15 | Agentic AI & MCP | ReAct, LangGraph, FastMCP, Agent Eval |
 | 16 | Module 16 | Multimodal & Speech | VLMs, Document AI, Whisper, Voice |
 | 17 | Module 17 | Optimization & Serving | Quantization, vLLM, Distillation |
 | 18 | Module 18 | MLOps & LLMOps | MLflow, Docker, K8s, CI/CD, Drift |
@@ -901,6 +919,7 @@ Students complete one full end-to-end project covering:
 - DeepLearning.AI — Deep Learning Specialization & GenAI short courses
 - HuggingFace — LLM Course, Diffusion Course, and Agents Course
 - Model Context Protocol — official spec and server examples (modelcontextprotocol.io)
+- FastMCP documentation (gofastmcp.com)
 - LangChain / LangGraph documentation and cookbooks
 - vLLM and PyTorch distributed training documentation
 - Model provider docs (Anthropic, OpenAI, Google) for prompting, tool use, and structured outputs
